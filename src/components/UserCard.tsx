@@ -1,4 +1,5 @@
 import React from "react";
+import "./UserCard.css";
 
 interface UserCardProps {
   name: string;
@@ -7,14 +8,7 @@ interface UserCardProps {
 
 const UserCard: React.FC<UserCardProps> = ({ name, age }) => {
   return (
-    <div
-      style={{
-        border: "2px solid blue",
-        padding: "10px",
-        margin: "10px",
-        borderRadius: "5px",
-      }}
-    >
+    <div className="user-card">
       <h2>{name}</h2>
       <p>Age: {age}</p>
     </div>
