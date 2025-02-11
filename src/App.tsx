@@ -1,19 +1,18 @@
 import "./App.css";
-import Greeting from "./components/Greeting";
-import UserCard from "./components/UserCard";
+import TodoList from "./components/TodoList";
+
+const todos = [
+  { task: "Learn React", completed: true },
+  { task: "Practice TypeScript", completed: false },
+  { task: "Build a project", completed: false },
+];
 
 function App() {
   return (
     <div>
-      <h1>Welcome to React + TypeScrypt</h1>
-      <Greeting name="Ali" />
-      <Greeting name="Mehdi" />
-
-      <hr />
-
-      <h2>User List</h2>
-      <UserCard name="Ali" age={25} />
-      <UserCard name="Sara" age={30} />
+      <h1>Welcome to React + TypeScript</h1>
+      <h2>My To-Do List</h2>
+      <TodoList todos={todos} />
     </div>
   );
 }
